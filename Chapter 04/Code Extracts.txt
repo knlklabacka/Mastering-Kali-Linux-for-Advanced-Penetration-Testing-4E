@@ -1,5 +1,5 @@
 sudo nmap --script-updatedb
-sudo nmap -T4 -A -sV -v3 -d -oA Target output --script all --script-argsvulns.showall target.com
+sudo nmap -T4 -A -sV -v3 -d -oA Target output --script all --script-args vulns.showall target.com
 sudo nikto -h target.com -Plugins “apacheusers(enumerate,dictionary:users.txt);report_xml” -output apacheusers.xml
 nikto.pl -host <hostaddress> -port <hostport> -useragentnikto -useproxy http://127.0.0.1:8080
 
